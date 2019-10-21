@@ -27,3 +27,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### It looks like:
+![alt text](/screens/first_screen.png)
+![alt text](/screens/second_screen.png)
