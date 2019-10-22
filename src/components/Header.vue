@@ -7,6 +7,6 @@
     #header{
         height: 7vh;
         width: 100%;
-        background:  #DDD;
+        background:  #cecece;
     }
 </style>

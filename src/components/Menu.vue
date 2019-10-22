@@ -38,10 +38,16 @@
         background: #545c64;
         padding: 0;
         margin: 0;
-        float: left, top;
+        float: left;
+    }
+    el-menu{
+        width: 90vh;
     }
     span{
         text-shadow: -2px 9px 9px #151216;
         font-size: 1.5em;
+    }
+    ul{
+        border-right: 0px;
     }
 </style>
