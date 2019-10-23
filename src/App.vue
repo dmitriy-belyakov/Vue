@@ -3,7 +3,7 @@
     <Header/>
     <Menu/>
     <Table/>
-    <edtinp :title = "first_name" v-model="first_name" />
+    <edtinp :title = "first_name" v-model="first_name" @save = "save"/>
   </div>
 </template>
 
@@ -21,6 +21,11 @@ export default {
   data () {
     return {
       first_name: 'Ann'
+    }
+  },
+  methods: {
+    save (title) {
+      this.first_name = title
     }
   }
 }
