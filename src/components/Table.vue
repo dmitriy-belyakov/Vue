@@ -1,33 +1,45 @@
 <template>
-    <div id = "table">
-        <el-table
-            :data="Data">
-            <el-table-column
-                label = "Name"
-                prop = "name">
-            </el-table-column>
-            <el-table-column
-                label = "Age"
-                prop = "age">
-            </el-table-column>
-            <el-table-column
-                label = "Sex"
-                prop = "sex">
-            </el-table-column>
-            <el-table-column
-                align="right">
-                <el-button
-                    size="mini"
-                    @click="Edit()">Edit
-                </el-button>
-                <el-button
-                    size="mini"
-                    type="danger"
-                    @click="Delete()">Delete
-                </el-button>
-            </el-table-column>
-        </el-table>
-    </div>
+  <div id="table">
+    <el-input
+      v-model="search"
+      size="mini"
+      type="string"
+      placeholder="Type to Search"
+    />
+    <br>
+    <el-table
+      :data="filteredDataset"
+    >
+      <el-table-column
+        label="Name"
+        prop="name"
+      />
+      <el-table-column
+        label="Age"
+        prop="age"
+      />
+      <el-table-column
+        label="Gender"
+        prop="gender"
+      />
+      <el-table-column
+        align="right">
+        <el-button
+          size="mini"
+          @click="edit"
+        >
+          Edit
+        </el-button>
+        <el-button
+          size="mini"
+          type="danger"
+          @click="del"
+        >
+          Delete
+        </el-button>
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
 <script>
@@ -35,36 +47,49 @@ export default {
   name: 'table',
   data () {
     return {
-      Data: [
+      dataset: [
         {
           name: 'John',
           age: 18,
-          sex: 'Male'
+          gender: 'Male'
         },
         {
           name: 'Ann',
           age: 17,
-          sex: 'Female'
+          gender: 'Female'
         },
         {
           name: 'Kate',
           age: 21,
-          sex: 'Female'
+          gender: 'Female'
         },
         {
           name: 'Sam',
           age: 19,
-          sex: 'Male'
+          gender: 'Male'
+        },
+        {
+          name: 'Alex',
+          age: 29,
+          gender: 'Male'
         }
-      ]
+      ],
+      search: ''
     }
   },
   methods: {
-    Edit () {
+    edit () {
       alert('NOT YET!')
     },
-    Delete () {
-      this.delete()
+    del () {
+      alert('NOT YET!')
+    }
+  },
+  computed: {
+    filteredDataset () {
+      return this.dataset.filter(data =>
+        !this.search || data.name.toLowerCase().includes(this.search.toLowerCase())
+      )
     }
   }
 }
@@ -79,5 +104,13 @@ export default {
         margin-top: 5%;
         margin-left: 5%;
         float: left;
+        margin-right: 0;
+        margin-bottom: 1%;
+        padding: 0;
+    }
+
+    .el-input{
+      width: 40vh;
+      float: right;
     }
 </style>

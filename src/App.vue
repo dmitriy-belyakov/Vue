@@ -3,6 +3,7 @@
     <Header/>
     <Menu/>
     <Table/>
+    <edtinp :title = "first_name" v-model="first_name" />
   </div>
 </template>
 
@@ -10,11 +11,17 @@
 import Menu from '@/components/Menu.vue'
 import Header from '@/components/Header.vue'
 import Table from '@/components/Table.vue'
+import edtinp from '@/components/edt_inp.vue'
 
 export default {
   name: 'app',
   components: {
-    Menu, Header, Table
+    Menu, Header, Table, edtinp
+  },
+  data () {
+    return {
+      first_name: 'Ann'
+    }
   }
 }
 </script>
