@@ -10,7 +10,7 @@
     />
     <img src="../../icons/edit.svg" v-if="!changing" @click="changing=true">
     <img src="../../icons/accept.svg" v-if="changing" @click="save">
-    <img src="../../icons/clear.svg" v-if="changing" @clic="cancel">
+    <img src="../../icons/clear.svg" v-if="changing" @click="cancel">
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
       this.$emit('input', this.string)
     },
     cancel () {
-      this.title = this.value
+      this.string = this.value
       this.changing = false
     }
   }
