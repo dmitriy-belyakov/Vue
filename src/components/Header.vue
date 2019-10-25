@@ -1,10 +1,10 @@
 <template>
-    <div id = "header">
+    <div class = "header">
     </div>
 </template>
 
 <style scoped>
-    #header{
+    .header{
         height: 7vh;
         width: 100%;
         background:  #cecece;

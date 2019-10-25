@@ -3,7 +3,7 @@
     <Header/>
     <Menu/>
     <Table/>
-    <edtinp :title = "first_name" v-model="first_name" @save = "save"/>
+    <editinp v-model="val"/>
   </div>
 </template>
 
@@ -11,16 +11,16 @@
 import Menu from '@/components/Menu.vue'
 import Header from '@/components/Header.vue'
 import Table from '@/components/Table.vue'
-import edtinp from '@/components/edt_inp.vue'
+import editinp from '@/components/editinp.vue'
 
 export default {
   name: 'app',
   components: {
-    Menu, Header, Table, edtinp
+    Menu, Header, Table, editinp
   },
   data () {
     return {
-      first_name: 'Ann'
+      val: 'Ann'
     }
   },
   methods: {

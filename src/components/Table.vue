@@ -1,5 +1,5 @@
 <template>
-  <div id="table">
+  <div class="table">
     <el-input
       v-model="search"
       size="mini"
@@ -98,7 +98,7 @@ export default {
 <style scoped>
     @import url("//unpkg.com/element-ui@2.12.0/lib/theme-chalk/index.css");
 
-    #table{
+    .table{
         width: 75%;
         height: 100%;
         margin-top: 5%;
