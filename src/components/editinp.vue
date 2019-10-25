@@ -8,9 +8,9 @@
         :placeholder="value"
         v-model="string"
     />
-    <img src = "../../icons/edit.svg" v-if="!changing" @click = "changing = true">
-    <img src = "../../icons/accept.svg" v-if="changing" @click = "save">
-    <img src = "../../icons/clear.svg" v-if="changing" @click = "cancel">
+    <img src="../../icons/edit.svg" v-if="!changing" @click="changing=true">
+    <img src="../../icons/accept.svg" v-if="changing" @click="save">
+    <img src="../../icons/clear.svg" v-if="changing" @clic="cancel">
   </div>
 </template>
 
